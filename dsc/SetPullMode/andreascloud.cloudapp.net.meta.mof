@@ -1,0 +1,44 @@
+/*
+@TargetNode='andreascloud.cloudapp.net'
+@GeneratedBy=andreas.storlien
+@GenerationDate=10/29/2014 14:05:18
+@GenerationHost=ANDREAS
+*/
+
+instance of MSFT_KeyValuePair as $MSFT_KeyValuePair1ref
+{
+Key = "ServerUrl";
+ Value = "https://andreasdc01.test.andreas.no:8080/PSDSCPullServer/PSDSCPullServer.svc/";
+
+};
+
+instance of MSFT_KeyValuePair as $MSFT_KeyValuePair2ref
+{
+Key = "AllowUnsecureConnection";
+ Value = "false";
+
+};
+
+instance of MSFT_DSCMetaConfiguration as $MSFT_DSCMetaConfiguration1ref
+{
+DownloadManagerName = "WebDownloadManager";
+ DownloadManagerCustomData = {
+       $MSFT_KeyValuePair1ref,
+   $MSFT_KeyValuePair2ref
+
+};
+ RefreshMode = "Pull";
+ RefreshFrequencyMins = 15;
+ ConfigurationID = "315c4b90-9dda-4117-b19a-6f019708b226";
+ RebootNodeIfNeeded = True;
+ ConfigurationMode = "ApplyAndAutoCorrect";
+
+};
+
+instance of OMI_ConfigurationDocument
+{
+ Version="1.0.0";
+ Author="andreas.storlien";
+ GenerationDate="10/29/2014 14:05:18";
+ GenerationHost="ANDREAS";
+};
